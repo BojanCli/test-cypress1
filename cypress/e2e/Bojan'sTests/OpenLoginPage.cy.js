@@ -4,7 +4,7 @@ describe('Login Screen Verification', () => {
         cy.visit('https://qa-1.climedo.de'); 
        
         // Verify if the login text is present 
-        cy.contains('Login to start your session').should('be.visible'); 
+        cy.contains('Log in to start your session').should('be.visible'); 
     }); 
 });
 
