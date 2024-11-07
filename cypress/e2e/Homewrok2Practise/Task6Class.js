@@ -1,7 +1,7 @@
 class AppActions {
     visitWebsite() {
         cy.visit('https://www.saucedemo.com/');
-    };
+    }
 
     login(username, password) {
         this.visitWebsite(); // Call the method using 'this'
@@ -9,7 +9,7 @@ class AppActions {
         cy.get('input[name="password"]').type(password);
         cy.get('input[type="submit"]').click();
         cy.url().should('include', 'inventory');
-    };
+    }
 
     purchaseItem(itemName) {
         cy.contains(itemName).click();
@@ -22,7 +22,7 @@ class AppActions {
         cy.get('input[name="continue"]').click();
         cy.get('[data-test="finish"]').click();
         cy.contains('Thank you for your order!').should('be.visible');
-    };
+    }
 
-};
-export default AppActions
+}
+export default new AppActions
