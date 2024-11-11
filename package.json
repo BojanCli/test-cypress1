@@ -3,7 +3,9 @@
     "open": "cypress open"
   },
   "devDependencies": {
-    "cypress": "^13.15.1"
+    "@faker-js/faker": "^9.2.0",
+    "cypress": "^13.15.2",
+    "cypress-xpath": "^2.0.1"
   },
   "dependencies": {
     "cypress-wait-until": "^3.0.2"
