@@ -1,8 +1,8 @@
 import navigateToElementsCard from "./AppActions/navigateToElementsCard";
 import handleError from "./AppActions/handleError";
-import checkBoxElements from "./AppActions/checkBoxElements";
+import checkBoxPage from "./AppActions/checkBoxPage";
 
-describe('Fill the text boxes',() => {
+describe('Fill the check boxes',() => {
 
     before(() => {
         handleError.uncaughtException();

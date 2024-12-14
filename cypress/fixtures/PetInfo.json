@@ -1,0 +1,9 @@
+{
+  "petId": 1,
+  "petName": "Dzeki",
+  "categoryId": 1,
+  "categoryName": "Dog",
+  "petStatus": "available",
+  "newPetName": "Toni",
+  "newPetStatus": "reserved"
+}

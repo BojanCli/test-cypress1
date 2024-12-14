@@ -19,10 +19,15 @@ describe('Fill the text boxes',() => {
         let permanentAddress = faker.location.streetAddress();
 
         cy.get('[type="text"]').type(name);
+        //cy.get('[placeholder="Full Name"]').type(name);
         cy.get('[type="email"]').type(email);
+        //cy.get('[placeholder="name@example.com""]').type(email);
         cy.get('[placeholder="Current Address"]').type(currentAddress);
+        //cy.get('#currentAddress').type(currentAddress);
         cy.get('#permanentAddress').type(permanentAddress);
+        //cy.xpath('//*[@id="permanentAddress"]').type(permanentAddress);
         cy.get('#submit').click();
+        //cy.contains('button', 'Submit').click();
 
         cy.get('#output').within(() => {
             cy.get('#name').should('contain', `Name:${name}`);
