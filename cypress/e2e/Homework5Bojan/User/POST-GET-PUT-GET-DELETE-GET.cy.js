@@ -27,20 +27,20 @@ describe('USER API', () => {
     });
   
     it('Update user with PUT API', () => {
-      requestBody.updatedfirstName = userData.updatedFirstName;
-      requestBody.updatedlastName = userData.updatedLastName;
+      requestBody.firstName = userData.updatedFirstName;
+      requestBody.lastName = userData.updatedLastName;
   
       cy.request('PUT', `https://petstore.swagger.io/v2/user/${userData.username}`, requestBody).then((response) => {
         expect(response.status).to.eq(200);
-        expect(response.body.message).to.eq(String(userData.username));
+        expect(response.body.message).to.eq(String(userData.userId));
       });
     });
   
     it('Validate updated user with GET API', () => {
       cy.request('GET', `https://petstore.swagger.io/v2/user/${userData.username}`).then((response) => {
         expect(response.status).to.eq(200);
-        expect(response.body.updatedfirstName).to.eq(userData.updatedFirstName);
-        expect(response.body.updatedlastName).to.eq(userData.updatedLastName);
+        expect(response.body.firstName).to.eq(userData.updatedFirstName);
+        expect(response.body.lastName).to.eq(userData.updatedLastName);
       });
     });
   
